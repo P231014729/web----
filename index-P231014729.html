@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23新闻学1班刘星余 Web第一次作业</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 2.5em;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 1200px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .ai-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        form {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            border: 2px solid #3498db;
+            border-radius: 25px;
+            width: 70%;
+            font-size: 16px;
+            flex: 1;
+        }
+
+        input[type="submit"] {
+            padding: 12px 35px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+
+        ol, ul {
+            background: rgba(255,255,255,0.8);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        img {
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            margin: 10px;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        iframe {
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>欢迎来到秘密小屋！</h1>
+    <div class="content">
+        <div class="ai-section">
+            <h2>AI元素：你可以选择想要生成的元素</h2>
+            <form action="https://www.aigc.cn/aigc-from-beginner-to-master">
+                <input type="text" name="q" placeholder="请输入生成元素...">
+                <input type="submit" value="立即生成">
+            </form>
+        </div>
+        <div>
+            <p>* 浑仪：三重环圈的精密宇宙模型</p>
+            <ol>
+                <li>
+                    简介：
+                    <ol>
+                        浑仪，是中国古代的一种天文观测仪器，是以浑天说为理论基础制造的、由相应天球坐标系各基本圈的环规及瞄准器构成的古代天文测量天体的仪器。浑仪的制造始于汉落下闳，到了唐代，由天文学家李淳风设计了一架比较精密完善的浑天黄道仪。元代的天文学家郭守敬将其简化，创制了简仪。中国现存最早的浑天仪制造于明朝，陈列在南京紫金山天文台。
+                    </ol>
+                </li>
+                <li>
+                    核心结构与技术参数：
+                    <ol>
+                        （1）六合仪（外层固定环）：
+                        由地平环（水平基准）、子午环（南北轴线）和赤道环（赤道平面）构成，采用青铜铸造，环面刻周天365.25度，对应古历法回归年长度。
+                        底座四龙柱高1.2米，龙体内部嵌入铁芯以增强抗变形能力，基座设水平校准水槽，误差小于0.1度。
+                    </ol>
+                    <ol>
+                        （2）三辰仪（中层旋转环）：
+                        包含黄道环（倾角23.25度，太阳轨道）、白道环（唐代李淳风增设，月球轨道）和赤道环（恒星参考），黄白交点可滑动调节，实现日月食预测。
+                        采用齿轮联动装置，通过水力驱动实现自动旋转（东汉张衡改进）。
+                    </ol>
+                    <ol>
+                        （3）四游仪（内层观测环）：
+                        窥管长1.2米，内径5厘米，采用“十字丝”照准技术（元代郭守敬改进），瞄准精度达±0.05度。
+                        四游环刻周天度数，最小分划值0.1度，可测量天体的“去极度”（赤纬）和“入宿度”（赤经）。
+                    </ol>
+                </li>
+                <li>
+                    功能——浑仪：赤道坐标测量的核心仪器
+                    <ol>
+                        测量天体的赤道坐标（“去极度”即天体距北极的角度，“入宿度”即天体与二十八宿距星的赤经差）。
+                    </ol>
+                </li>
+                <li>......</li>
+            </ol>
+            <ul>
+                <p>【更多天文仪器】</p>
+                <li>浑仪：三重环圈的精密宇宙模型</li>
+                <li>简仪：赤道装置的革命性突破</li>
+                <li>天体仪：融合中西的青铜浑象</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>天文仪器：图视并茂<br><span style="font-size: 0.8em; color: #666;">[融媒体传播]</span></h2>
+            <p>一、浑仪的图片：<a href="https://kepu.net.cn/gb//technology/ancientech/ancientech_astronomy/200404280015.html">点击跳转至中国科学院科普平台了解浑仪</a></p>
+        </div>
+
+        <div>
+            <p>
+                <img src="C:\Users\lxyso\Desktop\Web前端技术\Images\浑仪.png" alt="浑仪：三重环圈的精密宇宙模型" width="400">
+                <img src="C:\Users\lxyso\Desktop\Web前端技术\Images\浑仪2.jpg" width="300">
+            </p>
+            <p>
+                二、浑仪介绍视频：
+                <p>
+                    <iframe src="https://www.bilibili.com/video/BV1P94y1p7ug/?vd_source=372bd473bf4685f528e831103f88b327" 
+                        scrolling="no" 
+                        border="0" 
+                        frameborder="no" 
+                        framespacing="0" 
+                        allowfullscreen="true" 
+                        width="700"
+                        height="600">
+                    </iframe>
+                 </p>
+            </p>
+            三、爱你svg图：
+                <p>
+                    <img src="C:\Users\lxyso\Desktop\Web前端技术\Images\svg_many_love.svg" alt="爱你svg图片" width="200">
+            
+                </p>
+            </p>
+        </div>
+
+        <div>
+            <h2>表格相关元素</h2>
+            <table>
+                <tr><td>浑仪结构：</td><td>简仪结构：</td><td>天体仪结构：</td></tr>
+                <tr><td>六合仪（外层固定环）</td><td>赤道经纬仪（左半部）</td><td>铜质空心球</td></tr>
+                <tr><td>三辰仪（中层旋转环）</td><td>地平经纬仪（右半部）</td><td>底座四龙柱</td></tr>
+                <tr><td>四游仪（内层观测环）</td><td></td><td></td></tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
