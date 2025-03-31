@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 核心概念：背景、盒模型、布局、动画</title>
+    <style>
+        body {
+        background-color: rgb(240, 232, 222);
+        }
+        h1 {
+               background-image: url(".Images\背景图.jpg!con"); 
+               background-position: 50% 50%;
+               background-repeat: no-repeat;
+               text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 核心概念：背景、盒模型、布局、动画</h1>
+    <section>```
+    </section>
+    <section>
+        <h2>盒模型</h2>
+        <style>
+            .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgb(137, 11, 11)f0f; 
+            padding: 20px;
+            margin-bottom: 2em;
+            border-radius: 20px;
+            }
+        </style>
+        <div>
+         <div class="box">box 中的内容 1</div>
+         <div class="box">box 中的内容 2</div>
+        </div>
+    </section>
+    <section>
+        <h2>布局</h2>
+        <style>
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .box {
+                width: 200px;
+                height: 200px;          
+            }
+        </style>
+        <div class="container">
+            <div class="box">box 中的内容 1</div>
+            <div class="box">box 中的内容 2</div>
+            <div class="box">box 中的内容 3</div>
+    <!-- </section> -->
+    <!-- <section>
+        <h2>动画</h2>
+        <style>
+           .box {
+                width: 200px;
+                height: 200px;
+                background-color: rgb(137, 11, 11);
+                animation: move 2s infinite;
+            }
+    <!-- </section>
+     </section> -->
+    <section>
+        <h2>浮动</h2>
+        <style>
+            .box {
+                width: 200px;
+                height: 200px;
+                background-color: rgb(137, 11, 11);
+                float: left;
+            }
+        </style>
+    </section>
+    <section>
+        <h2>定位</h2>
+        <style>
+           .box {
+                width: 200px;
+                height: 200px;
+                background-color: rgb(137, 11, 11);
+                position: absolute;
+                top: 50px;
+                left: 50px;
+            }
+        </style>
+    </section>
+    <section>
+        <h2>响应式设计</h2>
+        <style>
+           .box {
+                width: 200px;
+                height: 200px;
+                background-color: rgb(137, 11, 11);
+            }
+        </style>
+    </section>
+    <section>
+        <h2>动画</h2>
+        <style>
+          .box {
+                width: 200px;
+                height: 200px;
+                background-color: rgb(137, 11, 11);
+                animation: move 2s infinite;
+            }
+            .box {
+                background: #2db34a;
+                transition-property: background;
+                transition-duration: 1s;
+                transition-timing-function: linear;
+                }
+            .box:hover {
+            background: #ff7b29;
+            }
+            .box {
+            background: #2db34a;
+            border-radius: 6px
+            transition-property: background, border-radius;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+            }
+            .box:hover {
+                background: #ff7b29;
+                border-radius: 50%;
+            }
+        </style>
+    </section>
+    <section>
+        <h2>弹性布局</h2>
+        <style>
+          .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+           .box {
+                width: 200px;
+                height: 200px;           
+           }
+    </section>
+</body>
+</html>
