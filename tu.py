@@ -51,3 +51,5 @@ if __name__ == '__main__':
     plt.grid(True, alpha=0.3)
     plt.tight_layout()
     plt.show()
+
+git push -f origin main
