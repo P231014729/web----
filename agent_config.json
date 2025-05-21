@@ -1,0 +1,14 @@
+{
+    "knowledge_categories": {
+        "html": ["标签", "元素", "属性", "结构"],
+        "css": ["选择器", "样式", "布局", "动画"],
+        "javascript": ["变量", "函数", "类", "异步"],
+        "nextjs": ["路由", "组件", "API", "部署"]
+    },
+    "file_patterns": {
+        "html": [".html", ".htm"],
+        "css": [".css"],
+        "javascript": [".js", ".jsx"],
+        "nextjs": [".ts", ".tsx"]
+    }
+}
