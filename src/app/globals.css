@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* 传统色彩定义 */
+  --color-heritage-red: #dc2626;
+  --color-heritage-gold: #d97706;
+  --color-heritage-blue: #1e40af;
+  --color-heritage-ink: #374151;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* main.css 样式迁移自 practice/main.css */
+h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+/* 轮播图动画 */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 传统纹样动画 */
+@keyframes heritage-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes heritage-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(220, 38, 38, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.6), 0 0 30px rgba(217, 119, 6, 0.4);
+  }
+}
+
+@keyframes heritage-pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes hero-text-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 动画工具类 */
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out forwards;
+}
+
+.animate-zoom-in {
+  animation: zoom-in 0.5s ease-out forwards;
+}
+
+.animate-hero-text {
+  animation: hero-text-reveal 1s ease-out forwards;
+}
+
+/* 自定义工具类 */
+.heritage-pattern-bg {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(30, 64, 175, 0.1) 0%, transparent 50%);
+}
+
+.heritage-border-pattern {
+  border-image: linear-gradient(45deg, var(--color-heritage-red), var(--color-heritage-gold), var(--color-heritage-blue)) 1;
+}
+
+.heritage-text-gradient {
+  background: linear-gradient(135deg, var(--color-heritage-ink), var(--color-heritage-red), var(--color-heritage-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 云纹装饰 */
+.cloud-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(220, 38, 38, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* 回纹装饰 */
+.hui-pattern {
+  position: relative;
+}
+
+.hui-pattern::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+}
+
+/* 轮播图特效 */
+.hero-banner-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.8) 0%,
+    rgba(15, 23, 42, 0.6) 30%,
+    rgba(15, 23, 42, 0.4) 60%,
+    rgba(15, 23, 42, 0.8) 100%
+  );
+}
+
+.hero-text-shadow {
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 响应式传统装饰 */
+@media (max-width: 768px) {
+  .heritage-pattern-bg {
+    background-size: 150px 150px;
+  }
+  
+  .heritage-float {
+    animation: heritage-float 4s ease-in-out infinite;
+  }
+  
+  /* 移动端轮播图调整 */
+  .hero-banner-mobile {
+    height: 50vh;
+  }
+  
+  .hero-text-mobile {
+    font-size: 2rem;
+  }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(248, 250, 252, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--color-heritage-red), var(--color-heritage-gold));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--color-heritage-gold), var(--color-heritage-blue));
+}
