@@ -1,0 +1,98 @@
+[
+  {
+    "id": 2,
+    "title": "宣纸制作·千年传承",
+    "description": "深入了解宣纸传统制作技艺，探索这一中华文化瑰宝的制作工序与文化内涵。",
+    "link": "/practice/my-app",
+    "imageUrl": "/img/xuanzhizhizuo.jpg",
+    "tags": ["传统技艺", "文房四宝"]
+  },
+  {
+    "id": 3,
+    "title": "京剧脸谱·梨园艺术",
+    "description": "学习京剧脸谱的绘制技法，领略国粹艺术的色彩美学与文化象征。",
+    "link": "/practice/03-css-01",
+    "imageUrl": "/img/jingjulianpu.jpg",
+    "tags": ["传统戏剧", "民间美术"]
+  },
+  {
+    "id": 4,
+    "title": "二十四节气·时令智慧",
+    "description": "探索二十四节气的文化内涵，了解古人的时间观念与农事智慧。",
+    "link": "/practice/03-css-02",
+    "imageUrl": "/img/ershisijieqi.jpg",
+    "tags": ["民俗文化", "传统历法"]
+  },
+  {
+    "id": 5,
+    "title": "古琴艺术·高山流水",
+    "description": "体验古琴的韵律之美，学习这一千年古乐器的演奏与文化内涵。",
+    "link": "/practice/04-css-01",
+    "imageUrl": "/img/guqinyishu.jpeg",
+    "tags": ["传统音乐", "文人雅趣"]
+  },
+  {
+    "id": 6,
+    "title": "书法艺术·笔墨春秋",
+    "description": "练习传统书法技艺，感受汉字之美与笔墨文化的深厚底蕴。",
+    "link": "/practice/04-css-02",
+    "imageUrl": "/img/shufayishu.jpg",
+    "tags": ["传统美术", "文房四艺"]
+  },
+  {
+    "id": 7,
+    "title": "剪纸艺术·民间瑰宝",
+    "description": "学习传统剪纸技艺，掌握这一流传千年的民间艺术形式。",
+    "link": "/practice/04-css-02-relative",
+    "imageUrl": "/img/jianzhiyishu.jpg",
+    "tags": ["民间美术", "传统技艺"]
+  },
+  {
+    "id": 8,
+    "title": "茶艺文化·品茗悟道",
+    "description": "深入了解中国茶文化，学习传统茶艺的礼仪与精神内涵。",
+    "link": "/practice/05-news01",
+    "imageUrl": "/img/chayiwenhua.jpg",
+    "tags": ["民俗文化", "生活艺术"]
+  },
+  {
+    "id": 9,
+    "title": "太极拳法·内外兼修",
+    "description": "学习太极拳的基本招式，体验这一传统武术的哲学智慧。",
+    "link": "/practice/06-news01",
+    "imageUrl": "/img/taijiquanfa.jpg",
+    "tags": ["传统体育", "养生文化"]
+  },
+  {
+    "id": 10,
+    "title": "昆曲艺术·百戏之祖",
+    "description": "欣赏昆曲的唱腔之美，了解这一古老戏曲形式的艺术特色。",
+    "link": "/practice/06-news02",
+    "imageUrl": "/img/kunquyishu.jpg",
+    "tags": ["传统戏剧", "声腔艺术"]
+  },
+  {
+    "id": 11,
+    "title": "中医药学·岐黄之术",
+    "description": "探索传统中医药的理论基础，了解这一古老医学体系的智慧。",
+    "link": "/practice/07-async-01",
+    "imageUrl": "/img/zhongguoyaoxue.jpg",
+    "tags": ["传统医药", "养生保健"]
+  },
+  {
+    "id": 12,
+    "title": "景德镇瓷器·陶瓷之都",
+    "description": "了解景德镇制瓷技艺，欣赏中国陶瓷艺术的精湛工艺。",
+    "link": "/practice/07-async-02",
+    "imageUrl": "/img/jingdezhenciqi.jpg",
+    "tags": ["传统技艺", "工艺美术"]
+  },
+  {
+    "id": 13,
+    "title": "传统建筑·古韵新辉",
+    "description": "探索中国传统建筑的结构之美，了解古代建筑的文化内涵。",
+    "link": "/practice/index",
+    "imageUrl": "/img/chauntongjianzhu.jpeg",
+    "tags": ["传统建筑", "文化遗产"]
+  }
+] 
