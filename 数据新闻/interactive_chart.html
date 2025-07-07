@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>数字博物馆纠纷例分析</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #f5f5f5;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 20px 0;
+        }
+        #detailInfo {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+            display: none;
+        }
+        #detailInfo h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        #detailInfo p {
+            color: #34495e;
+            line-height: 1.6;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div id="detailInfo"></div>
+    </div>
+
+    <script>
+        // 直接嵌入Excel数据
+        const excelData = {
+            categories: ['版权侵犯', '权属纠纷', '黑客入侵'],
+            counts: [5, 3, 2],
+            descriptions: ['1.1999 年中国商业出版未经故宫博物院许可出版相关文物图片，且抄错文物的名称、朝代、尺寸等信息，甚至把不能买卖的文物进行明码标价，引起了极为严重的社会反响声。&#10;2.2006 年《中国国家地理》用胡天博胜数码公司设备拍摄故宫博物馆进行"古瓷三维动画"制作，胡天博胜数码认为其有版权。&#10;3.2016 年德国柏林纽斯博物馆两个艺术家用大衣下的 3D 扫描设备扫描 Nefertiti 半身像并利用获得的数字信息制作复制品。&#10;4..2021 年北京市查处网站经营者未经著作人许可向公众征集全国范围内的革命纪念场馆图片、征集后集中展示并牟利，侵犯革命场馆摄影作品著作权。通过信息网络向公众传播作品。&#10;5.2022 年杭州原与宙公司未经许可私自发行"胖虎打疫苗"数字藏品，侵犯奇策公司网络传播权。', '1.2012 年北京鲁迅博物馆未经许可刊载将周作人书信、诗歌、书法等相关作品，存在侵权行为。&#10;2.2016 年，王倩、王艽将其父王子云的美术考古学资料的 4869 张胶片和照片捐献给陕西省美术馆，并签署了有偿捐献向意书，其后代认为美术馆侵犯了其著作权。&#10;3.2018 年邱怀喃、邱怀芬认为贵州省博物馆未经授权出版其爷爷书画集作品，侵犯著作权。', '1.2014 年黑客通过广东省博物馆网站后台系统漏洞篡改展览回顾板块多个页面，并在其网页写着"我叫红领巾"。&#10;2.2014 年英国牛津大学阿什莫林博物馆 8000 名访客的个人详细信息被黑客盗取，博物馆紧急向参观者发送信息。']
+        };
+
+        function createChart() {
+            const ctx = document.getElementById('myChart');
+            if (!ctx) return;
+
+            const gradients = [
+                ['rgba(54, 162, 235, 0.8)', 'rgba(54, 162, 235, 0.2)'],
+                ['rgba(75, 192, 192, 0.8)', 'rgba(75, 192, 192, 0.2)'],
+                ['rgba(255, 99, 132, 0.8)', 'rgba(255, 99, 132, 0.2)']
+            ];
+
+            const backgroundColors = gradients.map(([start, end]) => {
+                const gradient = ctx.getContext('2d').createLinearGradient(0, 0, 0, 400);
+                gradient.addColorStop(0, start);
+                gradient.addColorStop(1, end);
+                return gradient;
+            });
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: excelData.categories,
+                    datasets: [{
+                        label: '案件数量',
+                        data: excelData.counts,
+                        backgroundColor: backgroundColors,
+                        borderColor: gradients.map(([color]) => color),
+                        borderWidth: 2,
+                        borderRadius: 6,
+                        borderSkipped: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                font: {
+                                    family: '"Microsoft YaHei"',
+                                    size: 14
+                                }
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: '数字博物馆纠纷例分析',
+                            font: {
+                                family: '"Microsoft YaHei"',
+                                size: 18,
+                                weight: 'bold'
+                            },
+                            padding: 20
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.1)'
+                            },
+                            ticks: {
+                                font: {
+                                    family: '"Microsoft YaHei"',
+                                    size: 12
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                font: {
+                                    family: '"Microsoft YaHei"',
+                                    size: 12
+                                }
+                            }
+                        }
+                    },
+                    onClick: (event, elements) => {
+                        if (elements.length > 0) {
+                            const index = elements[0].index;
+                            const category = excelData.categories[index];
+                            const description = excelData.descriptions[index];
+                            const detailElement = document.getElementById('detailInfo');
+                            detailElement.style.display = 'block';
+                            detailElement.innerHTML = `<h3>${category}</h3><p>${description.replace(/&#10;/g, '<br>')}</p>`;
+                        }
+                    }
+                }
+            });
+        }
+
+        // 页面加载完成后创建图表
+        window.onload = createChart;
+    </script>
+</body>
+</html>

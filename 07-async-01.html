@@ -5,13 +5,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript 异步编程练习2</title>
+    <style>
+        :root {
+            --primary: #2D333B;
+            --secondary: #22272E;
+            --accent: #539BF5;
+            --text: #ADBAC7;
+            --border: #444C56;
+            --hover: #316DCA;
+        }
+
+        body {
+            background: var(--primary);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* 网格背景动画 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(var(--secondary) 1px, transparent 1px),
+                linear-gradient(90deg, var(--secondary) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.2;
+            z-index: -1;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            from { transform: translateY(0); }
+            to { transform: translateY(20px); }
+        }
+
+        h1 {
+            color: var(--accent);
+            text-align: center;
+            font-size: 2.5em;
+            margin: 40px 0;
+            text-shadow: 0 0 10px rgba(83, 155, 245, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 标题动画效果 */
+        h1::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            transform: translateX(-100%);
+            animation: titleLine 3s ease-in-out infinite;
+        }
+
+        @keyframes titleLine {
+            50% { transform: translateX(100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        #demo {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--secondary);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--primary);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--secondary);
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        tr {
+            transition: all 0.3s ease;
+        }
+
+        tr:hover {
+            background: var(--hover);
+            transform: scale(1.01);
+        }
+
+        /* 加载动画 */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+        .loading::after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 
 <body>
     <h1>JavaScript 异步编程练习</h1>
-    <div id="demo">
-
-    </div>
+    <div style="text-align: center; color: var(--accent); font-size: 1.2em; margin: 20px 0;">请打开控制台查看输出结果</div>
+    <div id="demo" class="loading"></div>
     <script>
         setTimeout(() => {
             console.log('111')
@@ -65,26 +203,37 @@
         // getAllCommitDates('yangjh-xbmu', 'Web-develop').then(dates => {
         //     console.log('所有提交日期:', JSON.stringify(dates));
         // });
+        // 修改展示函数，添加更多信息
         function showCommitDatesTable(dates) {
-            let html = '<table border="1" cellpadding="5"><tr><th>序号</th><th>提交日期</th></tr>';
+            let html = '<table><tr><th>序号</th><th>提交日期</th><th>距今</th></tr>';
             dates.forEach((date, idx) => {
-                html += `<tr><td>${idx + 1}</td><td>${date}</td></tr>`;
+                const commitDate = new Date(date);
+                const timeAgo = getTimeAgo(commitDate);
+                html += `<tr><td>${idx + 1}</td><td>${commitDate.toLocaleString()}</td><td>${timeAgo}</td></tr>`;
             });
             html += '</table>';
             document.getElementById('demo').innerHTML = html;
         }
 
-        getAllCommitDates('yangjh-xbmu', 'Web-develop')
-            .then(dates => {
-                console.log('所有提交日期:', JSON.stringify(dates));
-                showCommitDatesTable(dates);
-            });
+        // 添加时间计算函数
+        function getTimeAgo(date) {
+            const seconds = Math.floor((new Date() - date) / 1000);
+            const intervals = {
+                年: 31536000,
+                月: 2592000,
+                天: 86400,
+                小时: 3600,
+                分钟: 60
+            };
 
-
-
-
+            for (let [unit, secondsInUnit] of Object.entries(intervals)) {
+                const interval = Math.floor(seconds / secondsInUnit);
+                if (interval >= 1) {
+                    return `${interval} ${unit}前`;
+                }
+            }
+            return '刚刚';
+        }
     </script>
-
 </body>
-
 </html>
