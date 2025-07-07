@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古代物理学家图鉴 | 23新闻学1班刘星余 第二次作业</title>
+    <style>
+        /* 古风全局样式 */
+        body {
+            background: linear-gradient(to right, #F3E9D2 0%, #E6D5B8 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            font-family: '华文楷体', 'KaiTi', 'SimSun', serif;
+            color: #4A3A28;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #6B4F2F;
+            margin: 2rem 0;
+            position: relative;
+            letter-spacing: 3px;
+        }
+
+        h1:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, #8B7355 50%, transparent 100%);
+        }
+
+        .scholar-container {
+            background: rgba(255,255,255,0.9);
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem 3rem;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #8B7355;
+            position: relative;
+        }
+
+        .scholar-container:before {
+            content: "鉴";
+            position: absolute;
+            right: -30px;
+            top: -30px;
+            font-size: 3rem;
+            color: #B22222;
+            opacity: 0.3;
+            transform: rotate(15deg);
+        }
+
+        h2 {
+            font-family: '华文行楷', 'STXingkai', cursive;
+            color: #6B4226;
+            font-size: 2rem;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            border-left: 4px solid #B22222;
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 0;
+            position: relative;
+        }
+
+        .timeline:before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #D4B78F;
+        }
+
+        .scholar {
+            padding: 1.5rem;
+            margin: 2rem 0;
+            background: #FFFCF5;
+            border-radius: 3px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+            border: 1px solid #E8DBC7;
+        }
+
+        .scholar:hover {
+            transform: translateX(15px);
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .scholar:before {
+            content: "◈";
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #B22222;
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .dynasty {
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            background: #8B7355;
+            color: white;
+            border-radius: 3px;
+            font-size: 0.9rem;
+            margin-right: 1rem;
+        }
+
+        .contribution {
+            color: #6B4226;
+            border-left: 3px solid #D4B78F;
+            padding-left: 1rem;
+            margin: 0.8rem 0;
+        }
+
+        .highlight {
+            color: #B22222;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>华夏物理先贤录</h1>
+    
+    <div class="scholar-container">
+        <h2>古代物理学大家</h2>
+        <ul class="timeline">
+            <li class="scholar">
+                <span class="dynasty">东汉</span>
+                <strong>张衡</strong>（78-139）
+                <div class="contribution">
+                    创制浑天仪、候风地动仪，著《灵宪》阐述宇宙无限论，
+                    <span class="highlight">首次用科学方法解释月食成因</span>
+                </div>
+            </li>
+            
+            <li class="scholar">
+                <span class="dynasty">北宋</span>
+                <strong>沈括</strong>（1031-1095）
+                <div class="contribution">
+                    《梦溪笔谈》记载磁偏角现象、声学共振实验，
+                    <span class="highlight">首创分层筑堰测量法</span>
+                </div>
+            </li>
+            
+            <li class="scholar" style="border-color:#B22222;background:#FFF0F0">
+                <span class="dynasty">战国</span>
+                <strong>墨子</strong>（约前468-前376）
+                <div class="contribution">
+                    系统阐述光学成像原理、小孔成像实验，
+                    <span class="highlight">定义"力，形之所以奋也"的经典概念</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 核心语法学习一</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+            min-height: 100vh;
+        }
+
+        .console-output {
+            background: #1e1e1e;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            font-family: 'Consolas', monospace;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            line-height: 1.6;
+        }
+
+        .output-line {
+            margin: 8px 0;
+            padding: 5px 10px;
+            border-left: 3px solid #8ec5fc;
+        }
+
+        .string-output { color: #ce9178; }
+        .number-output { color: #b5cea8; }
+        .boolean-output { color: #569cd6; }
+        .function-output { color: #dcdcaa; }
+    </style>
+</head>
+<body>
+    <div class="console-output">
+        <script>
+            let a = 100;
+            console.log("数值变量 a =", a);
+            document.write('<div class="output-line number-output">数值变量 a = ' + a + '</div>');
+
+            const api_key = "1234567890";
+            console.log("API密钥 =", api_key);
+            document.write('<div class="output-line string-output">API密钥 = ' + api_key + '</div>');
+
+            console.log("类型检查:", typeof a, typeof api_key, typeof true);
+            document.write('<div class="output-line">类型检查: ' + typeof a + ', ' + typeof api_key + ', ' + typeof true + '</div>');
+
+            let b = "1";
+            console.log(a, "+", b, "=", a + b);
+            document.write('<div class="output-line">' + a + ' + ' + b + ' = ' + (a + b) + '</div>');
+            
+            console.log(a, "+", "Number(" + b + ") =", a + Number(b));
+            document.write('<div class="output-line">' + a + ' + Number(' + b + ') = ' + (a + Number(b)) + '</div>');
+
+            let c = "100";
+            console.log("类型比较:", a == c, a === c);
+            document.write('<div class="output-line">类型比较: ' + (a == c) + ', ' + (a === c) + '</div>');
+
+            let current_time = "周三";
+            if(current_time == "周四"){
+                console.log("交初稿！");
+                document.write('<div class="output-line">交初稿！</div>');
+            } else {
+                console.log("努力写代码......");
+                document.write('<div class="output-line">努力写代码......</div>');
+            }
+
+            for(let i = 1; i <= 5; i++){
+                console.log("循环输出:", i);
+                document.write('<div class="output-line number-output">循环输出: ' + i + '</div>');
+            }
+
+            let worke = 100;
+            while(worke > 95){
+                console.log("继续学习......");
+                document.write('<div class="output-line">继续学习......</div>');
+                worke = worke - 5;
+            }
+
+            function intro(){
+                console.log("我是一个绝世聪明的程序员！");
+                document.write('<div class="output-line function-output">我是一个绝世聪明的程序员！</div>');
+            }
+            intro();
+
+            function intro2(content){
+                console.log("以下是我介绍的内容：", String(content));
+                document.write('<div class="output-line">以下是我介绍的内容： ' + String(content) + '</div>');
+            }
+            intro2("这是传入的参数");
+
+            function intro3(content1, content2){
+                console.log("以下是我介绍的内容：", String(content1), String(content2));
+                document.write('<div class="output-line">以下是我介绍的内容：' + String(content1) + String(content2) + '</div>');
+            }
+            intro3("参数1", "参数2");
+
+            function intro4(content){
+                console.log(content);
+                document.write('<div class="output-line">' + content + '</div>');
+                return content + "这是返回值";
+            }
+            let result = intro4("带返回值的函数");
+            console.log("返回结果：", result);
+            document.write('<div class="output-line">返回结果：' + result + '</div>');
+        </script>
+    </div>
+</body>
+</html>

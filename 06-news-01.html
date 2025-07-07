@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生学习管理系统</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        h1:hover {
+            transform: translateY(-5px);
+            color: #3498db;
+        }
+
+        div {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        p {
+            color: #34495e;
+            line-height: 1.6;
+            font-size: 1.1em;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        p:hover {
+            transform: translateX(10px);
+            background: #f1f3f5;
+        }
+    </style>
+    <script>
+        // 类和对象
+        // 1. 定义一个类
+        class Student {
+            // 构造函数
+            constructor(name, age, school, grade) {
+                this.name = name;
+                this.age = age;
+                this.school = school;
+                this.grade = grade;
+            }
+            // 方法
+            learn(subject = "语文") {
+                console.log(`${this.name}正在学习${subject}，真棒！`);
+            }
+            exam() {
+                console.log(`${this.name} 正在考试`);
+            }
+        }
+        // 2. 创建对象
+        let xiaoming = new Student("小明", 7, "实验小学", 1);
+        xiaoming.learn("英语");
+        xiaoming.exam();
+
+        class Undergraduate extends Student {
+            constructor(name, age, school, grade, major, experience) {
+                super(name, age, school, grade);
+                this.major = major;
+                this.experience = experience;
+            }
+
+            intern(corp) {
+                console.log(`${this.name}在${corp}实习，获得经验值1000`);
+                console.log(super.exam())
+            }
+        }
+
+        let xiaoming2 = new Undergraduate("小明", 17, "科技大学", 1, "新闻学", 0);
+        xiaoming2.intern("腾讯");
+
+        // 回调函数，函数作为参数传递给另一个函数
+        console.log("111111");
+
+        setTimeout(function () { console.log("222222") }, 1000);
+
+        console.log("333333");
+
+    </script>
+</head>
+<body>
+    <div>
+        <h1 id="demo" onclick="alert('欢迎来到学生管理系统！')">学生学习管理平台</h1>
+        <div>
+            <p id="anotherp">欢迎使用学生学习管理系统！这是一个智能化的学习平台，帮助学生更好地管理学习进度和记录学习成果。点击了解更多功能！</p>
+        </div>
+    </div>
+
+    <script>
+        let myh1 = document.getElementById("demo");
+        console.log(myh1);
+        // 1. 改变元素的内容
+        myh1.innerHTML = "智慧学习管理系统";
+        // 2. 改变元素的样式
+        myh1.style.color = "#3498db";
+
+        let myp = document.getElementById("anotherp");
+        myp.onclick = function () {
+            alert("感谢使用我们的系统！\n- 智能学习进度追踪\n- 考试成绩管理\n- 实习经验记录");
+        }
+
+        window.onload = function () {
+            alert("系统加载完成，开始您的学习之旅！");
+        }
+    </script>
+</body>
+</html>
