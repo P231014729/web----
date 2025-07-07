@@ -93,4 +93,8 @@ class CodeKnowledgeAgent:
             f.write(f"### 学习文件：{file_name}\n")
             f.write("### 知识点：\n")
             for point in knowledge_points:
+<<<<<<< HEAD
                 f.write(f"- {point}\n")
+=======
+                f.write(f"- {point}\n")
+>>>>>>> 34fecc800246bf4d1ef9d0ffd55a9fd316540671
