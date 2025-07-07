@@ -35,9 +35,36 @@
         .number-output { color: #b5cea8; }
         .boolean-output { color: #569cd6; }
         .function-output { color: #dcdcaa; }
+    
+        .console-tip {
+            background: #1e1e1e;
+            color: #8ec5fc;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+            font-family: 'Microsoft YaHei', sans-serif;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            animation: tipPulse 2s infinite;
+        }
+    
+        @keyframes tipPulse {
+            0% { box-shadow: 0 10px 30px rgba(142, 197, 252, 0.2); }
+            50% { box-shadow: 0 10px 30px rgba(142, 197, 252, 0.4); }
+            100% { box-shadow: 0 10px 30px rgba(142, 197, 252, 0.2); }
+        }
+    
+        .console-tip::before {
+            content: '🔍';
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
+    <div class="console-tip">按 F12 键打开控制台查看完整运行结果</div>
     <div class="console-output">
         <script>
             let a = 100;
