@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "中华非遗传承平台 - 传统文化数字化学习",
-  description: "探索中华非物质文化遗产，传承千年文化精髓，打造现代化非遗学习平台",
+  title: "刘星余学习展示平台 - 科技文化数字化学习",
+  description: "探索中古今未来科技文化，传承千年文化精髓，打造现代化科技文化学习平台",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-slate-50 via-stone-50 to-amber-50 min-h-screen relative`}
+        className={`${inter.className} antialiased bg-gradient-to-br from-slate-50 via-stone-50 to-amber-50 min-h-screen relative`}
         style={{
           backgroundImage: `
             radial-gradient(circle at 20% 30%, rgba(185, 28, 28, 0.05) 0%, transparent 50%),
