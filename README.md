@@ -1,4 +1,4 @@
-# 潘延项目文档
+# 刘星余项目文档
 
 ## 技术架构
 | 技术栈         | 版本   | 用途                 |
@@ -89,13 +89,8 @@ src/app
 ```
 
 ## 文档截图
-![架构图](https://img.picui.cn/free/2025/06/30/686283de5ca84.png)架构图1
-(https://img.picui.cn/free/2025/06/30/686283d8dea2f.png)架构图2
-(https://img.picui.cn/free/2025/06/30/686283d624b8c.png)架构图3
-(https://img.picui.cn/free/2025/06/30/6862891355a02.png)时长图 
-(https://img.picui.cn/free/2025/06/30/68628a0aaaa77.png)时长为3个账户总时长，网页运用PanPan账户
-![QAnything集成](https://img.picui.cn/free/2025/06/30/686283d85b54f.png)
-
-推荐使用 [Vercel平台](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) 部署您的Next.js应用。
-
-查看 [Next.js部署文档](https://nextjs.org/docs/app/building-your-application/deploying) 了解更多详情。
+![架构图]({D9E736A0-7A75-4FBB-B6F6-661DCB0E9CFF}.png)架构图1
+({49004764-93A2-430D-9716-6D9AE7076F3E}.png)架构图2
+({DB37CF26-44EE-4A39-85BE-A5DB9B5DA4C6}.png)架构图3
+({C0ED8979-2777-411D-A0CE-7DA334A6C5FA}.png)时长图 
+![QAnything集成]({D1B796B0-4E4E-4FA0-A2BB-D0A82AAF88FB}.png)

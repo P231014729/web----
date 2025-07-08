@@ -7,19 +7,19 @@ export default function HeroBanner() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
-      image: '/img/lunbo1.jpg',
-      title: '中华非遗·传承千年',
-      subtitle: '探索非物质文化遗产的深厚内涵'
+      image: '/img/1.jpg',
+      title: '千年瑰宝·源远流长',
+      subtitle: '探索中华文化的宝贵历史'
     },
     {
-      image: '/img/lunbo2.jpg', 
-      title: '文化瑰宝·世代相传',
-      subtitle: '守护民族文化的珍贵记忆'
+      image: '/img/2.jpg', 
+      title: '匠心传承·守正创新',
+      subtitle: '传统与现代的完美融合'
     },
     {
-      image: '/img/lunbo3.jpg',
-      title: '匠心传承·技艺永续',
-      subtitle: '弘扬传统工艺的精湛技法'
+      image: '/img/3.jpg',
+      title: '数字非遗·智创未来',
+      subtitle: '科技赋能传统文化新生'
     }
   ];
 
@@ -71,34 +71,34 @@ export default function HeroBanner() {
           <div className="mb-4">
             {/* 装饰线 */}
             <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent to-amber-400"></div>
-              <div className="w-3 h-3 bg-red-600 rounded-full shadow-lg"></div>
-              <div className="w-24 h-px bg-gradient-to-r from-amber-400 to-red-600"></div>
-              <div className="w-3 h-3 bg-amber-600 rounded-full shadow-lg"></div>
-              <div className="w-16 h-px bg-gradient-to-r from-red-600 to-transparent"></div>
+              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#B88A67]"></div>
+              <div className="w-3 h-3 bg-[#8B4513] rounded-full shadow-lg"></div>
+              <div className="w-24 h-px bg-gradient-to-r from-[#B88A67] to-[#8B4513]"></div>
+              <div className="w-3 h-3 bg-[#B88A67] rounded-full shadow-lg"></div>
+              <div className="w-16 h-px bg-gradient-to-r from-[#8B4513] to-transparent"></div>
             </div>
           </div>
           
           <h1 
             key={`title-${currentSlide}`}
-            className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-red-400 to-amber-400 drop-shadow-2xl animate-fade-in tracking-wider"
+            className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#B88A67] via-[#8B4513] to-[#B88A67] drop-shadow-2xl animate-fade-in tracking-wider"
           >
             {slides[currentSlide].title}
           </h1>
           
           <p 
             key={`subtitle-${currentSlide}`}
-            className="text-lg md:text-2xl text-amber-100 mb-8 drop-shadow-lg animate-fade-in tracking-wide"
+            className="text-lg md:text-2xl text-[#D2B48C] mb-8 drop-shadow-lg animate-fade-in tracking-wide"
           >
             {slides[currentSlide].subtitle}
           </p>
           
           {/* CTA按钮 */}
           <div className="flex justify-center gap-4">
-            <button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 px-8 py-3 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl border border-red-500">
+            <button className="bg-gradient-to-r from-[#E6B89C] to-[#B9846F] hover:from-[#B9846F] hover:to-[#986C57] px-8 py-3 rounded-full text-[#FCF5E5] font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl border border-[#B9846F]">
               开始探索
             </button>
-            <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900 px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105">
+            <button className="border border-[#E6B89C] text-[#E6B89C] hover:bg-[#E6B89C] hover:text-[#FCF5E5] px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105">
               了解更多
             </button>
           </div>
@@ -132,7 +132,7 @@ export default function HeroBanner() {
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide 
-                ? 'bg-amber-400 shadow-lg shadow-amber-400/50' 
+                ? 'bg-[#B88A67] shadow-lg shadow-[#B88A67]/50' 
                 : 'bg-white/50 hover:bg-white/80'
             }`}
           />
@@ -140,8 +140,8 @@ export default function HeroBanner() {
       </div>
 
       {/* 传统装饰元素 */}
-      <div className="absolute top-8 left-8 w-16 h-16 border-2 border-amber-400/30 rounded-full opacity-60 animate-pulse"></div>
-      <div className="absolute bottom-8 right-8 w-12 h-12 border-2 border-red-400/30 transform rotate-45 opacity-60 animate-pulse"></div>
+      <div className="absolute top-8 left-8 w-16 h-16 border-2 border-[#B88A67]/30 rounded-full opacity-60 animate-pulse"></div>
+      <div className="absolute bottom-8 right-8 w-12 h-12 border-2 border-[#8B4513]/30 transform rotate-45 opacity-60 animate-pulse"></div>
     </div>
   );
-} 
+}
