@@ -270,8 +270,8 @@ src/app
 
 ### 文档截图
 
-![Next.js组织课程练习作业的运行截图](Liuxingyu/public/images/首页图.png)运行图1
-![作业卡片组展示](Liuxingyu/public/images/作业卡片组.png)运行图2
-![作业页面展示](Liuxingyu/public/images/作业页面截图.png)运行图3
-![WakaTime API集成与展示截图（显示总编码时长）](Liuxingyu/public/images/时长图.png)时长图
-![QAnything运行截图](Liuxingyu/public/images/QAnything的Api_Key接入.png)
+![Next.js组织课程练习作业的运行截图](public/images/首页图.png)运行图1
+![作业卡片组展示](public/images/作业卡片组.png)运行图2
+![作业页面展示](public/images/作业页面截图.png)运行图3
+![WakaTime API集成与展示截图（显示总编码时长）](public/images/时长图.png)时长图
+![QAnything运行截图](public/images/QAnything的Api_Key接入.png)
