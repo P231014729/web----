@@ -1,0 +1,98 @@
+[
+  {
+    "id": 2,
+    "title": "阴阳五行·宇宙之道",
+    "description": "探索中国传统哲学中阴阳五行的深邃智慧，了解这一古老智慧体系对宇宙万物的诠释与应用。",
+    "link": "/practice/my-app",
+    "imageUrl": "/img/wuxing.jpg",
+    "tags": ["中国哲学", "传统文化"]
+  },
+  {
+    "id": 3,
+    "title": "张衡·浑天仪圣",
+    "description": "探索东汉天文学家张衡的科学成就，了解浑天仪的设计原理与科技创新。",
+    "link": "/practice/03-css-01",
+    "imageUrl": "/img/xianxian.jpg",
+    "tags": ["古代科技", "天文仪器"]
+  },
+  {
+    "id": 4,
+    "title": "活字印刷·传承千年",
+    "description": "探索毕昇活字印刷术的革命性发明，了解这项改变世界的中国古代科技成就。",
+    "link": "/practice/03-css-02",
+    "imageUrl": "/img/huoziyinshu.jpg",
+    "tags": ["古代科技", "印刷技术"]
+  },
+  {
+    "id": 5,
+    "title": "佛像艺术·敦煌瑰宝",
+    "description": "探索敦煌莫高窟的佛像艺术，感受千年石窟中的庄严与静谧之美。",
+    "link": "/practice/04-css-01",
+    "imageUrl": "/img/foxiang.jpg",
+    "tags": ["佛教艺术", "文化遗产"]
+  },
+  {
+    "id": 6,
+    "title": "融媒体新闻·多元传播",
+    "description": "探索现代新闻传播方式，体验多媒体融合报道的创新实践。",
+    "link": "/practice/04-css-02",
+    "imageUrl": "/img/media.jpg",
+    "tags": ["新闻传播", "数字媒体"]
+  },
+  {
+    "id": 7,
+    "title": "数字陶瓷·科技创新",
+    "description": "探索数字技术与传统陶瓷的融合，体验3D建模与智能制造的创新工艺。",
+    "link": "/practice/04-css-02-relative",
+    "imageUrl": "/img/taoci.jpg",
+    "tags": ["数字艺术", "智能制造"]
+  },
+  {
+    "id": 8,
+    "title": "未来建筑·智慧之城",
+    "description": "探索智能建筑技术，体验科技与建筑艺术的完美融合。",
+    "link": "/practice/05-news01",
+    "imageUrl": "/img/future_building.jpg",
+    "tags": ["智慧城市", "科技创新"]
+  },
+  {
+    "id": 9,
+    "title": "三体文明·科技探索",
+    "description": "探索三体文明的科技发展，体验智子监控下的黑暗森林法则与降维打击。",
+    "link": "/practice/06-news01",
+    "imageUrl": "/img/santi.jpg",
+    "tags": ["科幻文化", "未来科技"]
+  },
+  {
+    "id": 10,
+    "title": "水下美术馆·艺术新境",
+    "description": "探索水下艺术展览，体验艺术与海洋生态的完美融合。",
+    "link": "/practice/06-news02",
+    "imageUrl": "/img/underwater_museum.jpg",
+    "tags": ["海洋艺术", "生态保护"]
+  },
+  {
+    "id": 11,
+    "title": "星穹观测·探索宇宙",
+    "description": "探索星空奥秘，了解现代天文观测技术与宇宙探索的前沿发展。",
+    "link": "/practice/07-async-01",
+    "imageUrl": "/img/stargazing.jpg",
+    "tags": ["天文科技", "宇宙探索"]
+  },
+  {
+    "id": 12,
+    "title": "AI智能分析·深度学习",
+    "description": "探索AI深度学习技术，体验智能分析的强大能力。",
+    "link": "/practice/07-async-02",
+    "imageUrl": "/img/ai_analysis.jpg",
+    "tags": ["人工智能", "深度学习"]
+  },
+  {
+    "id": 13,
+    "title": "诗词雅韵·墨香千年",
+    "description": "探索中华诗词艺术的深邃之美，感受千年文化积淀的诗意传承。",
+    "link": "/practice/index",
+    "imageUrl": "/img/shici.jpg",
+    "tags": ["古典诗词", "文化传承"]
+  }
+]
