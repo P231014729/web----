@@ -305,48 +305,35 @@ export default function ChatDemo() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black flex relative overflow-hidden">
+    <div className="min-h-screen bg-[#E2B275] bg-opacity-20 bg-[url('/practice/images/dunhuang-corner.png')] bg-repeat flex relative overflow-hidden">
       {/* 动态背景装饰 */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* 科技感网格 */}
-        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#4a4a4a_1px,transparent_1px),linear-gradient(to_bottom,#4a4a4a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-[#8C4D2D] via-[#E2B275] to-[#D4A06A] opacity-30">
+        {/* 敦煌纹理背景 */}
+        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#8C4D2D_1px,transparent_1px),linear-gradient(to_bottom,#8C4D2D_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         
-        {/* 飘动的云纹 */}
+        {/* 飘动的祥云 */}
         <div className="absolute top-0 left-0 w-full h-32 opacity-20 bg-[url('/cloud-pattern.png')] animate-float"></div>
         
         {/* 动态光效 */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        
-        {/* 科技感装饰元素 */}
-        <div className="absolute top-10 right-10 w-32 h-32 border border-cyan-500/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
-        <div className="absolute bottom-20 left-20 w-40 h-40 border border-purple-500/30 rounded-full animate-[spin_15s_linear_infinite]"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#E2B275]/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-[#D4A06A]/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       {/* 左侧边栏 */}
-      <div className="w-80 bg-black/40 backdrop-blur-xl border-r border-gray-800 shadow-2xl flex flex-col relative z-10">
+      <div className="w-80 bg-[#8C4D2D]/90 backdrop-blur-xl border-r border-[#D4A06A] shadow-2xl flex flex-col relative z-10">
         {/* 头部 */}
-        <div className="p-6 border-b border-gray-800">
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-red-400 bg-clip-text text-transparent">
+        <div className="p-6 border-b border-[#D4A06A]">
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-[#E2B275] via-[#D4A06A] to-[#8C4D2D] bg-clip-text text-transparent">
             文明探索
           </h1>
-          <p className="text-gray-400 text-sm mt-1">传统与未来的对话</p>
-        </div>
-
-        {/* 文化小贴士 */}
-        <div className="p-4 border-b border-gray-800">
-          <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg p-3 min-h-[60px] flex items-center border border-gray-700/50">
-            <div className="text-sm text-gray-300 transition-all duration-500">
-              {culturalTips[currentTip]}
-            </div>
-          </div>
+          <p className="text-[#E2B275] text-sm mt-1">传统与未来的对话</p>
         </div>
 
         {/* 新建对话和快速提问按钮 */}
-        <div className="p-4 border-b border-gray-800 space-y-3">
+        <div className="p-4 border-b border-[#D4A06A] space-y-3">
           <button
             onClick={createNewChat}
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/20"
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-[#E2B275] to-[#D4A06A] text-[#8C4D2D] rounded-xl hover:from-[#D4A06A] hover:to-[#8C4D2D] transition-all duration-200 shadow-lg hover:shadow-[#E2B275]/20 font-medium"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -356,7 +343,7 @@ export default function ChatDemo() {
           
           <button
             onClick={() => setShowQuickQuestions(!showQuickQuestions)}
-            className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-purple-500/20"
+            className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-[#D4A06A] to-[#8C4D2D] text-[#E2B275] rounded-lg hover:from-[#8C4D2D] hover:to-[#D4A06A] transition-all duration-200 shadow-lg hover:shadow-[#D4A06A]/20"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -367,14 +354,14 @@ export default function ChatDemo() {
 
         {/* 快速提问面板 */}
         {showQuickQuestions && (
-          <div className="p-4 border-b border-gray-800 max-h-60 overflow-y-auto">
-            <h3 className="text-sm font-medium text-gray-300 mb-3">探索主题</h3>
+          <div className="p-4 border-b border-[#D4A06A] max-h-60 overflow-y-auto">
+            <h3 className="text-sm font-medium text-[#E2B275] mb-3">探索主题</h3>
             <div className="space-y-2">
               {quickQuestions.map((question, index) => (
                 <button
                   key={index}
                   onClick={() => handleQuickQuestion(question)}
-                  className="w-full text-left p-2 text-sm text-gray-400 hover:bg-gray-800/50 rounded-lg transition-colors border border-gray-800/50 hover:border-cyan-500/30"
+                  className="w-full text-left p-2 text-sm text-[#E2B275] hover:bg-[#D4A06A]/30 rounded-lg transition-colors border border-[#D4A06A]/50 hover:border-[#E2B275]/30"
                 >
                   {question}
                 </button>
@@ -387,12 +374,12 @@ export default function ChatDemo() {
         <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
           <div className="p-4">
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-sm font-medium text-gray-300">对话历史</h3>
-              <span className="text-xs text-gray-500">{chatHistories.length}/50</span>
+              <h3 className="text-sm font-medium text-[#FFF6E7]">对话历史</h3>
+              <span className="text-xs text-[#FFF6E7]/70">{chatHistories.length}/50</span>
             </div>
             
             {chatHistories.length === 0 ? (
-              <div className="text-center py-8 text-gray-500">
+              <div className="text-center py-8 text-[#FFF6E7]/70">
                 <svg className="w-12 h-12 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
@@ -405,20 +392,20 @@ export default function ChatDemo() {
                     key={chat.id}
                     className={`group relative p-3 rounded-lg cursor-pointer transition-all ${
                       currentChatId === chat.id
-                        ? 'bg-gray-800/50 border border-cyan-500/30'
-                        : 'hover:bg-gray-800/30 border border-gray-800/50 hover:border-purple-500/30'
+                        ? 'bg-[#8C4D2D]/30 border border-[#E2B275]/30'
+                        : 'hover:bg-[#8C4D2D]/20 border border-[#8C4D2D]/30 hover:border-[#E2B275]/30'
                     }`}
                     onClick={() => loadChat(chat.id)}
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-medium text-gray-300 truncate">
+                        <h4 className="text-sm font-medium text-[#FFF6E7] truncate">
                           {chat.title}
                         </h4>
-                        <p className="text-xs text-gray-500 mt-1">
+                        <p className="text-xs text-[#FFF6E7]/70 mt-1">
                           {new Date(chat.updatedAt).toLocaleDateString()} • {chat.messages.length}条消息
                         </p>
-                        <p className="text-xs text-gray-600 mt-1">
+                        <p className="text-xs text-[#FFF6E7]/60 mt-1">
                           {kbList.find(kb => kb.kbId === chat.kbId)?.kbName || '未知文化库'}
                         </p>
                       </div>
@@ -427,7 +414,7 @@ export default function ChatDemo() {
                           e.stopPropagation();
                           deleteChat(chat.id);
                         }}
-                        className="opacity-0 group-hover:opacity-100 p-1 text-gray-500 hover:text-red-400 transition-all"
+                        className="opacity-0 group-hover:opacity-100 p-1 text-[#FFF6E7]/70 hover:text-red-400 transition-all"
                         title="删除对话"
                       >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -443,14 +430,14 @@ export default function ChatDemo() {
         </div>
 
         {/* 知识库选择 */}
-        <div className="p-4 border-t border-gray-800">
-          <label className="block text-sm font-medium text-gray-300 mb-3">
+        <div className="p-4 border-t border-[#8C4D2D]/30">
+          <label className="block text-sm font-medium text-[#FFF6E7] mb-3">
             选择探索主题
           </label>
           <select
             value={selectedKbId}
             onChange={(e) => setSelectedKbId(e.target.value)}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-xl text-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 bg-gradient-to-br from-[#8C4D2D]/20 to-[#D4A06A]/20 border border-[#E2B275]/30 rounded-xl text-[#FFF6E7] focus:outline-none focus:ring-2 focus:ring-[#E2B275]/50 focus:border-transparent transition-all"
             disabled={loading}
           >
             {kbList.length === 0 ? (
@@ -468,6 +455,16 @@ export default function ChatDemo() {
 
       {/* 主聊天区域 */}
       <div className="flex-1 flex flex-col relative z-10">
+        {/* 顶部区域 - 居中显示轮播内容 */}
+        <div className="p-6 border-b border-amber-800/30 flex justify-center">
+          {/* 轮播内容 */}
+          <div className="bg-gradient-to-br from-[#8C4D2D]/20 to-[#D4A06A]/20 rounded-lg p-4 min-h-[80px] flex items-center border border-[#E2B275]/30 max-w-2xl w-full">
+            <div className="text-sm text-[#FFF6E7] transition-all duration-500 text-center w-full">
+              {culturalTips[currentTip]}
+            </div>
+          </div>
+        </div>
+
         {/* 错误提示 */}
         {error && (
           <div className="mx-6 mt-6 p-4 bg-red-900/20 border border-red-500/30 rounded-xl backdrop-blur-sm">
@@ -479,68 +476,42 @@ export default function ChatDemo() {
         )}
 
         {/* 消息区域 */}
-        <div className="flex-1 overflow-y-auto px-6 py-6 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+        <div className="flex-1 overflow-y-auto px-6 py-6 scrollbar-thin scrollbar-thumb-[#8C4D2D] scrollbar-track-transparent">
           {messages.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mb-6 animate-pulse shadow-lg shadow-purple-500/20">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#E2B275] to-[#8C4D2D] rounded-full flex items-center justify-center mb-6 animate-pulse shadow-lg shadow-[#D4A06A]/20">
+                <svg className="w-10 h-10 text-[#FFF6E7]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               </div>
-              <h2 className="text-xl font-semibold text-gray-200 mb-2">开启文明探索之旅</h2>
-              <p className="text-gray-400 max-w-md mb-4">
+              <h2 className="text-xl font-semibold text-[#FFF6E7] mb-2">开启文明探索之旅</h2>
+              <p className="text-[#FFF6E7] max-w-md mb-4">
                 {selectedKbId ? "请输入您的问题，一起来探索文明的奥秘" : "请先选择一个探索主题"}
               </p>
-              {selectedKbId && (
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 max-w-lg">
-                  {quickQuestions.slice(0, 6).map((question, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleQuickQuestion(question)}
-                      className="p-2 text-xs text-gray-300 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg transition-colors border border-gray-700/50 hover:border-cyan-500/30 backdrop-blur-sm"
-                    >
-                      {question}
-                    </button>
-                  ))}
-                </div>
-              )}
             </div>
           ) : (
             <div className="max-w-4xl mx-auto space-y-6">
-              {/* 消息内容保持不变 */}
               {messages.map((message, index) => (
                 <div key={index} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                   <div className={`flex items-start space-x-3 max-w-[70%] ${message.role === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
-                    {/* 头像 */}
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                      message.role === 'user' 
-                        ? 'bg-gradient-to-br from-red-500 to-red-700' 
-                        : 'bg-gradient-to-br from-amber-400 to-orange-500'
-                    }`}>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.role === 'user' ? 'bg-gradient-to-br from-[#E2B275] to-[#8C4D2D]' : 'bg-gradient-to-br from-[#D4A06A] to-[#8C4D2D]'}`}>
                       {message.role === 'user' ? (
-                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-[#FFF6E7]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
                       ) : (
-                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-[#FFF6E7]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                       )}
                     </div>
                     
-                    {/* 消息内容 */}
-                    <div className={`px-4 py-3 rounded-2xl ${
-                      message.role === 'user'
-                        ? 'bg-gradient-to-br from-amber-500 to-yellow-600 text-white'
-                        : 'bg-gradient-to-br from-amber-50 to-yellow-50 border border-amber-200 text-gray-800 shadow-sm'
-                    }`}>
+                    <div className={`px-4 py-3 rounded-2xl ${message.role === 'user' ? 'bg-gradient-to-br from-[#E2B275] to-[#D4A06A] text-[#8C4D2D]' : 'bg-gradient-to-br from-[#FFF6E7] to-[#F5E6CA] border border-[#D4A06A] text-[#8C4D2D] shadow-sm'}`}>
                       <div className="whitespace-pre-wrap text-sm leading-relaxed">
                         {message.content}
                       </div>
                       {message.timestamp && (
-                        <div className={`text-xs mt-2 ${
-                          message.role === 'user' ? 'text-amber-100' : 'text-amber-500'
-                        }`}>
+                        <div className={`text-xs mt-2 ${message.role === 'user' ? 'text-[#8C4D2D]/70' : 'text-[#8C4D2D]/60'}`}>
                           {new Date(message.timestamp).toLocaleTimeString()}
                         </div>
                       )}
@@ -548,30 +519,6 @@ export default function ChatDemo() {
                   </div>
                 </div>
               ))}
-              
-              {loading && (
-                <div className="flex justify-start">
-                  <div className="flex items-start space-x-3 max-w-[70%]">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                      </svg>
-                    </div>
-                    <div className="bg-white border border-red-100 rounded-2xl px-4 py-3 shadow-sm">
-                      <div className="flex items-center space-x-2">
-                        <div className="flex space-x-1">
-                          <div className="w-2 h-2 bg-red-400 rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-red-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                          <div className="w-2 h-2 bg-red-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                        </div>
-                        <span className="text-red-600 text-sm">正在思考...</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              
-              <div ref={messagesEndRef} />
             </div>
           )}
         </div>

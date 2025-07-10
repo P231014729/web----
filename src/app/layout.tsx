@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "./navbar";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -48,7 +49,14 @@ export default function RootLayout({
           <div className="absolute top-1/3 left-1/3 w-16 h-8 bg-gradient-to-r from-red-100 to-transparent rounded-full opacity-30"></div>
           <div className="absolute bottom-1/3 right-1/3 w-20 h-10 bg-gradient-to-l from-blue-100 to-transparent rounded-full opacity-30"></div>
         </div>
-        {children}
+        
+        {/* 添加导航栏 */}
+        <Navbar />
+        
+        {/* 主内容区域，添加左边距以适应侧边栏 */}
+        <main className="ml-64 p-6">
+          {children}
+        </main>
       </body>
     </html>
   );

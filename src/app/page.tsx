@@ -4,56 +4,6 @@ import exercisesData from './exercises.json';
 import WakaTimeStats from "./wakatime-stats";
 import HeroBanner from "./hero-banner";
 
-function Navbar() {
-  return (
-    <nav className="fixed top-0 left-0 right-0 bg-[#8B4513]/90 backdrop-blur-md text-[#E2C49F] p-4 shadow-lg w-full z-50 border-b border-[#CD853F]/30 bg-[url('/images/dunhuang-pattern.png')] bg-repeat">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold hover:text-[#DAA520] transition-colors duration-300 tracking-wider flex items-center gap-2">
-          <div className="w-8 h-8 bg-gradient-to-br from-red-600 to-amber-600 rounded-full flex items-center justify-center">
-            <span className="text-sm font-black text-white">学</span>
-          </div>
-          刘星余学习展示平台
-        </Link>
-        <div className="hidden md:flex space-x-6 text-base">
-          <Link href="/" className="hover:text-amber-400 transition-colors duration-300 relative group">
-            首页
-            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] transition-all duration-300 group-hover:w-full"></div>
-          </Link>
-          <Link href="#heritage-categories" className="hover:text-amber-400 transition-colors duration-300 relative group">
-            作业分类
-            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] transition-all duration-300 group-hover:w-full"></div>
-          </Link>
-          <Link href="#heritage-masters" className="hover:text-amber-400 transition-colors duration-300 relative group">
-            文明进程
-            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] transition-all duration-300 group-hover:w-full"></div>
-          </Link>
-          <Link href="#cultural-activities" className="hover:text-amber-400 transition-colors duration-300 relative group">
-            文化竞赛
-            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] transition-all duration-300 group-hover:w-full"></div>
-          </Link>
-          <Link href="#learning-resources" className="hover:text-amber-400 transition-colors duration-300 relative group">
-            学习资源
-            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] transition-all duration-300 group-hover:w-full"></div>
-          </Link>
-          <Link href="/practice/QAnything" className="hover:text-amber-400 transition-colors duration-300 relative group">
-            文化问答
-            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#DAA520] transition-all duration-300 group-hover:w-full"></div>
-          </Link>
-        </div>
-        
-        {/* 移动端菜单按钮 */}
-        <div className="md:hidden">
-          <button className="text-white hover:text-amber-400 transition-colors duration-300">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </nav>
-  );
-}
-
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen items-center overflow-hidden relative">
@@ -71,15 +21,13 @@ export default function HomePage() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60rem] h-[60rem] opacity-20 -z-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#D4AF37] via-[#8B4513] to-transparent rounded-full blur-3xl"></div>
       </div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60rem] h-[60rem] opacity-15 -z-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#DAA520] via-[#8B4513] to-transparent rounded-full blur-3xl"></div>
-      
-      <Navbar />
 
       {/* 轮播图区域 */}
-      <div className="w-full pt-20">
+      <div className="w-full">
         <HeroBanner />
       </div>
 
-      <main className="flex-grow container mx-auto px-4 py-12 w-full z-10 relative">
+      <main className="flex-grow w-full container mx-auto px-4 py-12 z-10 relative">
         <header className="text-center mb-20 relative">
           {/* 敦煌风格标题装饰 */}
           <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-40 h-12 bg-[url('/images/dunhuang-title-decor.png')] bg-contain bg-no-repeat"></div>
@@ -107,7 +55,7 @@ export default function HomePage() {
 
         {/* 分类标签区域 */}
         <div className="mb-12 flex justify-center" id="heritage-categories">
-          <div className="bg-[#F5DEB3]/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-[#CD853F]/50">
+          <div className="w-full backdrop-blur-sm rounded-2xl p-6 shadow-lg">
             <h2 className="text-2xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-red-700 to-amber-700">
               古今未来中华文化分类（作业）
             </h2>
@@ -144,13 +92,13 @@ export default function HomePage() {
                   color: "from-purple-700 to-pink-600"
                 }
               ].map((category, index) => (
-                <div key={index} className="bg-white/40 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-[#CD853F]/30 hover:border-[#CD853F]/50">
+                <div key={index} className="glass-card backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-slate-200/30 hover:border-slate-300/50">
                   <h3 className={`text-xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r ${category.color}`}>
                     {category.era}·{category.title}
                   </h3>
                   <div className="grid grid-cols-1 gap-3">
                     {category.items.map((item, idx) => (
-                      <div key={idx} className="flex items-center justify-center space-x-2 p-2 rounded-lg hover:bg-white/50 transition-colors cursor-pointer">
+                      <div key={idx} className="flex items-center justify-center space-x-2 p-2 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
                         <span className="text-2xl">{item.icon}</span>
                         <span className="font-medium text-slate-700">{item.name}</span>
                       </div>
@@ -278,7 +226,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#8B4513]/20 to-[#DAA520]/20 rounded-lg transform transition-transform duration-500 group-hover:scale-105"></div>
                 <div className="relative p-6 bg-white/80 backdrop-blur-sm rounded-lg border border-[#CD853F]/30 shadow-lg overflow-hidden">
                   <div className="text-[#8B4513] text-xl font-bold mb-3">数字创意大赛</div>
-                  <p className="text-[#6B4423] mb-4">探索传统与现代科技的创新融合</p>
+                  <p className="text-[#6B4423] mb-4">探索传统与现代科技创新融合</p>
                   <div className="absolute bottom-0 right-0 w-24 h-24 bg-[url('/img/dunhuang-corner.png')] bg-contain bg-no-repeat opacity-20"></div>
                 </div>
               </div>
@@ -288,7 +236,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#8B4513]/20 to-[#DAA520]/20 rounded-lg transform transition-transform duration-500 group-hover:scale-105"></div>
                 <div className="relative p-6 bg-white/80 backdrop-blur-sm rounded-lg border border-[#CD853F]/30 shadow-lg overflow-hidden">
                   <div className="text-[#8B4513] text-xl font-bold mb-3">智能修复竞赛</div>
-                  <p className="text-[#6B4423] mb-4">运用AI技术助力文物数字化修复</p>
+                  <p className="text-[#6B4423] mb-4">运用AI助力文物数字化修复</p>
                   <div className="absolute bottom-0 right-0 w-24 h-24 bg-[url('/img/dunhuang-corner.png')] bg-contain bg-no-repeat opacity-20"></div>
                 </div>
               </div>
@@ -373,15 +321,15 @@ export default function HomePage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
                   <div className="bg-white/30 backdrop-blur-sm rounded-2xl p-6 transform hover:scale-105 transition-transform duration-300 shadow-lg border border-amber-100/30">
-                    <div className="text-4xl font-bold text-red-700 mb-3">100+</div>
+                    <div className="text-4xl font-bold text-red-700 mb-3">+++</div>
                     <p className="text-amber-800 text-lg font-medium">科技文化项目</p>
                   </div>
                   <div className="bg-white/30 backdrop-blur-sm rounded-2xl p-6 transform hover:scale-105 transition-transform duration-300 shadow-lg border border-amber-100/30">
-                    <div className="text-4xl font-bold text-amber-700 mb-3">50+</div>
+                    <div className="text-4xl font-bold text-amber-700 mb-3">++++</div>
                     <p className="text-amber-800 text-lg font-medium">品学大师</p>
                   </div>
                   <div className="bg-white/30 backdrop-blur-sm rounded-2xl p-6 transform hover:scale-105 transition-transform duration-300 shadow-lg border border-amber-100/30">
-                    <div className="text-4xl font-bold text-blue-700 mb-3">10万+</div>
+                    <div className="text-4xl font-bold text-blue-700 mb-3">+++++</div>
                     <p className="text-amber-800 text-lg font-medium">学习用户</p>
                   </div>
                 </div>
