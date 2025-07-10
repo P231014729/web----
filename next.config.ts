@@ -30,9 +30,6 @@ const nextConfig: NextConfig = {
       }
     ]
   },
-  env: {
-    WAKATIME_API_KEY: 'waka_ec86e50f-123f-4687-8b6a-0c39cbef98ec'
-  }
 };
 
 export default nextConfig;
